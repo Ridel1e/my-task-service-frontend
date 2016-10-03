@@ -1,0 +1,16 @@
+<svg width="120" height="50" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="52" width="122" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <text font-style="italic" xml:space="preserve" text-anchor="start" font-family="'Shadows Into Light', serif" font-size="20" id="svg_1" y="36.124968" x="59.624972" stroke-width="0" stroke="#000" fill="#607d8b">Tasks</text>
+  <text font-style="italic" xml:space="preserve" text-anchor="start" font-family="'Shadows Into Light', serif" font-size="24" id="svg_2" y="36.124968" x="26.375068" stroke-width="0" stroke="#000" fill="#a1dd80">My</text>
+  <path stroke="#607d8b" id="svg_4" d="m8.49535,24.433609c0.324609,-0.310236 0.424489,-0.508787 0.424489,-0.508787l0.02497,0c0,0 -0.012485,0.273007 -0.012485,0.546015l0,5.655597l-1.946614,0l0,1.066177l5.066814,0l0,-1.066177l-1.921644,0l0,-7.689709l-1.097636,0l-2.108918,2.034112l0.748057,0.769385l0.822967,-0.806613zm4.583022,6.089927c0,0.211994 0.02497,0.43433 0.062425,0.669075l5.677537,0l0,-1.066177l-4.366616,0c0.02393,-1.996884 4.229281,-2.442589 4.229281,-5.321576c0,-1.512916 -1.159021,-2.519114 -2.782066,-2.519114c-1.984069,0 -2.783106,1.661829 -2.783106,1.661829l0.910362,0.607028c0,0 0.624248,-1.116848 1.78535,-1.116848c0.922847,0 1.583509,0.582209 1.583509,1.450869c0,2.064101 -4.316676,2.510841 -4.316676,5.634914zm-4.331242,-18.203596l-2.080827,0l0,3.448787l2.080827,0l0,-3.448787zm11.444549,1.205783l0,3.278157l-4.161654,0l0,-3.278157l-6.242481,0l0,3.276089l-4.159573,0l0,-3.276089l-2.51676,0l0,22.408324l19.594109,0l0,-22.408324l-2.513639,0zm1.474266,21.373171l-17.513281,0l0,-15.424918l17.513281,0l0,15.424918zm-2.51468,-22.578954l-2.080827,0l0,3.448787l2.080827,0l0,-3.448787z" stroke-width="0.5" fill="#69a2bc"/>
+ </g>
+</svg>

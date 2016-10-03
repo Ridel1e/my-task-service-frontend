@@ -1,0 +1,23 @@
+.day-card_hovered {
+  box-shadow: 1px 0 5px black;
+}
+
+
+.day-card_hovered .day-card__content {
+  flex-basis: 70%;
+}
+
+.day-card_hovered .day-card__image {
+  background-size: 200% 200%;
+  opacity: .5;
+}
+//
+.day-card_hovered .day-card__task-count {
+  animation: 1.5s show-day-card;
+  opacity: 1;
+}
+
+@keyframes show-day-card {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
