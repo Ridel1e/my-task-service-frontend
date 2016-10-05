@@ -4,15 +4,16 @@
 	<meta charset="UTF-8">
 	<title>Title</title>
 	<link rel="stylesheet" href="importer.css">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 <body class="wrapper">
+
 	<header class="header">
-		<input type="text" class="search header__search" placeholder="Search">
+		<input type="text" class="search header__search" placeholder="Поиск">
 		<div class="header__logo"></div>
 		<div class="header__button_panel">
-			<button class="button header__button">
+			<button class="button header__button header__create-task-button">
 				<i class="fa fa-calendar-plus-o"></i>
 			</button>
 			<button class="button header__button">
@@ -24,6 +25,7 @@
 			</button>
 		</div>
 	</header>
+
 	<main class="day-list">
 		<article class="day-card" calendar-date="2016-10-02">
 			<div class="day-card__image">
@@ -90,7 +92,36 @@
 				<span class="day-card__task-count">Число задач: 8</span>
 			</div>
 		</article>
+		<article class="day-card" calendar-date="2017-07-21">
+			<div class="day-card__image"></div>
+			<div class="day-card__content">
+				<span class="day-card__date">21 Марта</span>
+				<span class="day-card__day-name">Вторник</span>
+				<span class="day-card__task-count">Число задач: 8</span>
+			</div>
+		</article>
 	</main>
+
+		<section class="slider">
+			<form class="task-creation-form">
+				<h2 class="task-creation-form__header">Создать Задачу</h2>
+				<input type="text"
+				       name="title"
+				       class="form-control task-creation-form__form-control"
+				       placeholder="Заголовок">
+				<textarea type="text"
+				          name="description"
+				          class="form-control task-creation-form__form-control task-creation-form__text-area"
+				          placeholder="Описание"></textarea>
+				<input type="datetime-local"
+				       name="notification-time"
+				       class="form-control task-creation-form__form-control task-creation-form__date-picker">
+				<input type="date"
+				       name="complete-date"
+				       class="form-control task-creation-form__form-control task-creation-form__date-picker">
+				<button class="button task-creation-form__button">Сохранить</button>
+			</form>
+		</section>
 	<script src="js/main.js"></script>
 </body>
 </html>

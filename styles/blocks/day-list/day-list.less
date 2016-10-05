@@ -1,10 +1,15 @@
 .day-list {
-  flex-basis: 700px;
-  overflow: scroll;
-  width: 70%;
+  flex-basis: 720px;
+  margin-top: 100px;
+  //overflow: auto;
+  width: 1000px;
 
   /* flex container properties */
   align-items: center;
   display: flex;
   flex-wrap: wrap;
+}
+
+.day-list::-webkit-scrollbar {
+  display: none;
 }

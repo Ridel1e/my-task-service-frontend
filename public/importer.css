@@ -2,15 +2,19 @@
   background: white;
   border: none;
   border-radius: 2px;
-  box-shadow: 0 0 3px grey;
-  font-size: 1em;
-  font-style: italic;
-  min-height: 25px;
+  box-shadow: 0 1px 2px grey;
+  cursor: pointer;
+  font-size: 1.2em;
+  min-height: 30px;
   /*flex container properties */
+  align-items: center;
   display: flex;
 }
 .button:hover {
-  box-shadow: 0 0 3px black;
+  box-shadow: 0 1px 5px grey;
+}
+.button:focus {
+  outline: none;
 }
 .button__icon {
   margin-right: 2%;
@@ -18,84 +22,73 @@
 }
 .search {
   border: none;
-  border-radius: 2px;
-  box-shadow: 0 0 1px grey;
+  border-bottom: 1px solid lightgray;
   color: grey;
-  height: 20px;
-  font-size: .9em;
+  height: 45px;
+  font-size: 1.3em;
   min-width: 100px;
 }
-.header {
+.search:focus {
+  outline: none;
+}
+.slider {
+  animation: 0.1s task-creation-form-show;
   background: white;
-  box-shadow: 1px 1px 1.5px grey;
-  height: 75px;
-  width: 99%;
-  /* flex container properties */
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.header__logo {
-  background: url(/images/logo.svg);
-  background-size: 100% 100%;
-  height: 75%;
-  margin-right: 10%;
-  width: 120px;
-}
-.header__button_panel {
+  box-shadow: 1px 1px 3px black;
+  min-height: 500px;
+  right: -350px;
+  position: fixed;
+  top: 15%;
+  transition: .5s ease all;
+  width: 350px;
+  z-index: 2;
   /* flex container properties */
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
 }
-.header__button {
-  color: #607d8b;
-  margin: 0 5%;
-  text-shadow: 0 0 0.1 #455f6b;
+.slider_active {
+  right: 0px;
 }
-.header__search {
-  margin-right: 70px;
-  width: 130px;
+.form-control {
+  border: none;
+  box-shadow: 0 2px 0 lightgray;
+  color: grey;
+  height: 40px;
+  font-size: 1.2em;
+  min-width: 100px;
+  transition: .1s linear;
 }
-.header__search_focused {
-  animation: 0.5s extend-search;
-  margin-right: 0;
-  width: 200px;
-}
-@keyframes extend-search {
-  from {
-    width: 130px;
-    margin-right: 70px;
-  }
-  to {
-    width: 200px;
-    margin-right: 0;
-  }
+.form-control:focus {
+  outline: none;
 }
 .wrapper {
-  background: whitesmoke;
-  width: 100%;
+  background: url(/images/background.jpg);
   /* flex container properties */
   align-items: center;
   display: flex;
   flex-direction: column;
 }
 .day-list {
-  flex-basis: 700px;
-  overflow: scroll;
-  width: 70%;
+  flex-basis: 720px;
+  margin-top: 100px;
+  width: 1000px;
   /* flex container properties */
   align-items: center;
   display: flex;
   flex-wrap: wrap;
 }
+.day-list::-webkit-scrollbar {
+  display: none;
+}
 .day-card {
   background: #FFFFFF;
-  box-shadow: 1px 0 4px grey;
-  flex-basis: 200px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  flex-basis: 220px;
   height: 300px;
   margin: 30px 1.5%;
-  transition: 1.5s linear;
+  cursor: pointer;
+  transition: .25s ease all;
   /* flex container properties */
   display: flex;
   flex-direction: column;
@@ -103,7 +96,7 @@
 .day-card__image {
   border-bottom: 1px solid darkgray;
   flex-basis: 60%;
-  transition: .5s linear;
+  transition: .25s ease all;
 }
 .day-card_theme_fall .day-card__image {
   background: url(/images/fall.jpg) no-repeat;
@@ -123,30 +116,32 @@
 }
 .day-card__content {
   color: #90A4AE;
+  box-shadow: 0 -0.5px 1px grey;
   flex-basis: 40%;
-  font-family: 'Open Sans Condensed', sans-serif;
-  transition: .5s linear;
+  font-family: 'Roboto', sans-serif;
+  transition: .25s ease all;
   /* flex container properties */
   display: flex;
   flex-direction: column;
 }
 .day-card__date {
-  font-size: 2em;
-  margin: 0 5%;
-  text-shadow: 1px 1px 1px black;
+  color: #546E7A;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 10% 10% 0;
 }
 .day-card__day-name {
-  font-size: 1.5em;
-  margin: 0 5%;
+  font-size: 1.2em;
+  margin: 1% 10% 0;
 }
 .day-card__task-count {
   color: #90A4AE;
-  font-size: 1.2em;
-  margin: 25% 0 0 5%;
+  font-size: 1.3em;
+  margin: 20% 0 0 10%;
   opacity: 0;
 }
 .day-card_hovered {
-  box-shadow: 1px 0 5px black;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 .day-card_hovered .day-card__content {
   flex-basis: 70%;
@@ -156,7 +151,7 @@
   opacity: .5;
 }
 .day-card_hovered .day-card__task-count {
-  animation: 1.5s show-day-card;
+  animation: 0.7s show-day-card;
   opacity: 1;
 }
 @keyframes show-day-card {
@@ -166,4 +161,98 @@
   to {
     opacity: 1;
   }
+}
+.header {
+  align-self: stretch;
+  background: white;
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.12), 0 5px 2px rgba(0, 0, 0, 0.24);
+  height: 75px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: -50%;
+  width: 100%;
+  z-index: 1;
+  /* flex container properties */
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.header__logo {
+  background: url(/images/logo.svg);
+  background-size: 100% 100%;
+  height: 75%;
+  margin-right: 5%;
+  width: 120px;
+}
+.header__button_panel {
+  /* flex container properties */
+  display: flex;
+  justify-content: space-around;
+}
+.header__button {
+  color: #546E7A;
+  font-family: 'Roboto', sans-serif;
+  margin: 0 5%;
+}
+.header__search {
+  border-bottom: 1px solid #90A4AE;
+  color: #546E7A;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.7em;
+  margin-right: 70px;
+  transition: .2s ease all;
+  padding: 0;
+  width: 130px;
+}
+.header__search::-webkit-input-placeholder {
+  color: #90A4AE;
+}
+.header__search_focused {
+  border-bottom: 2px solid #90A4AE;
+  margin-right: 0;
+  width: 200px;
+}
+.task-creation-form {
+  flex-basis: 90%;
+  width: 100%;
+  /* flex container properties */
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.task-creation-form__form-control {
+  color: #546E7A;
+  font-family: 'Roboto', sans-serif;
+  height: 35px;
+  margin: 2% 0;
+  width: 70%;
+}
+.task-creation-form__form-control::-webkit-input-placeholder {
+  color: #90A4AE;
+}
+.task-creation-form__form-control:focus {
+  box-shadow: 0 3px 0 #90A4AE;
+}
+.task-creation-form__text-area {
+  height: 100px;
+  resize: none;
+}
+.task-creation-form__header {
+  color: #546E7A;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 10%;
+  width: 70%;
+}
+.task-creation-form__date-picker::-webkit-date-and-time-value {
+  color: #90A4AE;
+}
+.task-creation-form__button {
+  color: #546E7A;
+  font-family: 'Roboto', sans-serif;
+  margin: 10% 0;
 }

@@ -18,6 +18,16 @@ class DOMElementDecorator {
   }
 
   /**
+   * Class in a element class list check
+   * @param className
+   * @returns {boolean}
+   */
+  hasClass (className) {
+    return this._element.className.indexOf(` ${className}`) !== -1
+  }
+
+
+  /**
    * Remove class from DOM element
    * @param className
    */
@@ -68,7 +78,15 @@ class DOMElementDecorator {
   unfocus (callback) {
     this._element.addEventListener('focusout', callback)
   }
-  
+
+  /**
+   * Add handler to click event
+   * @param callback
+   */
+  click (callback) {
+    this._element.addEventListener('click', callback);
+  }
+
   /**
    * Add custom event listener to DOM element
    * @param event
