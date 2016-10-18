@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Day Tasks</title>
+	<link rel="stylesheet" href="importer.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body class="wrapper">
+	<header class="header">
+		<input type="text" class="search header__search" placeholder="Поиск">
+		<div class="header__logo"></div>
+		<div class="header__button_panel">
+			<button class="button header__button header__create-task-button">
+				<i class="fa fa-calendar-plus-o"></i>
+			</button>
+			<button class="button header__button">
+				<i class="fa fa-cog button__icon"></i>
+				Ridelle
+			</button>
+			<button class="button header__button">
+				<i class="fa fa-info-circle"></i>
+			</button>
+		</div>
+	</header>
+
+	<main class="tasks-container">
+		<div class="task-list">
+			<article class="task" task-id="1"
+			         title="AnyLogic: найти гайды"
+			         description="AnyLogic: найти гайды"
+			         complete-date="1994-12-22"
+			         notification-time="1994-12-22T22:00">
+				<i class="fa fa-check task__icon"></i>
+				<span class="task-title">AnyLogic: найти гайды</span>
+			</article>
+			<article class="task" task-id="2"
+			         title="страничка тасков одной даты"
+			         description="страничка тасков одной даты"
+			         complete-date="1994-12-22"
+			         notification-time="1994-12-22T23:00">
+				<i class="fa fa-check task__icon"></i>
+				<span class="task-title">страничка тасков одной даты</span>
+			</article>
+			<article class="task" task-id="3"
+			         title="Убраться в комнате"
+			         description="Убраться в комнате"
+			         complete-date="1994-12-22"
+			         notification-time="1994-12-22T23:00">
+				<i class="fa fa-check task__icon"></i>
+				<span class="task-title">Убраться в комнате</span>
+			</article>
+		</div>
+		<div class="edition-form-container">
+			<form class="task-creation-form task-creation-form_mode_edit" name="editionForm">
+				<input type="text"
+				       name="title"
+				       class="form-control task-creation-form__form-control"
+				       placeholder="Заголовок">
+					<textarea type="text"
+					          name="description"
+					          class="form-control task-creation-form__form-control task-creation-form__text-area"
+					          placeholder="Описание"></textarea>
+				<input type="datetime-local"
+				       name="notificationTime"
+				       class="form-control task-creation-form__form-control task-creation-form__date-picker">
+				<input type="date"
+				       name="completeDate"
+				       class="form-control task-creation-form__form-control task-creation-form__date-picker">
+				<button class="button task-creation-form__button">Сохранить</button>
+			</form>
+		</div>
+	</main>
+
+	<section class="slider">
+		<form class="task-creation-form">
+			<h2 class="task-creation-form__header">Создать Задачу</h2>
+			<input type="text"
+			       name="title"
+			       class="form-control task-creation-form__form-control"
+			       placeholder="Заголовок">
+			<textarea type="text"
+			          name="description"
+			          class="form-control task-creation-form__form-control task-creation-form__text-area"
+			          placeholder="Описание"></textarea>
+			<input type="datetime-local"
+			       name="notification-time"
+			       class="form-control task-creation-form__form-control task-creation-form__date-picker">
+			<input type="date"
+			       name="complete-date"
+			       class="form-control task-creation-form__form-control task-creation-form__date-picker">
+			<button class="button task-creation-form__button">Сохранить</button>
+		</form>
+	</section>
+	<script src="js/day-tasks.js"></script>
+</body>
+</html>

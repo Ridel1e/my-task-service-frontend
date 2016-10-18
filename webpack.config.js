@@ -13,7 +13,8 @@ module.exports = {
   context: __dirname + '/js/pages',
 
   entry: {
-    main: './main.js'
+    main: './main.js',
+    "day-tasks": './day-tasks.js'
   },
 
   output: {
