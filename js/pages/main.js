@@ -3,4 +3,5 @@
  */
 
 import '../components/header/widget';
+import '../components/task-list/widget';
 import '../components/day-list/widget';

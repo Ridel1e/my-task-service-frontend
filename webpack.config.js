@@ -12,14 +12,11 @@ module.exports = {
 
   context: __dirname + '/js/pages',
 
-  entry: {
-    main: './main.js',
-    "day-tasks": './day-tasks.js'
-  },
+  entry: './main.js',
 
   output: {
     path: __dirname + '/public/js',
-    filename: '[name].js'
+    filename: 'app.js'
   },
 
   watch: NODE_ENV === 'development',
